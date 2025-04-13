@@ -10,10 +10,15 @@
 <body>
   <header>
     <div class="logo">Marjolaine B. Alemaña</div>
-    <nav>
+  
+    <nav id="navbar">
       <a href="home.html">Home</a>
-      <a href="#">Contacts</a>
+      <a href="contact.html">Contacts</a>
     </nav>
+  
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
   </header>
 
   <main>
@@ -45,4 +50,13 @@
     <p>Marjolaine B. Alemaña</p>
   </footer>
 </body>
+
+<script>
+  const menuToggle = document.getElementById('menu-toggle');
+  const navbar = document.getElementById('navbar');
+
+  menuToggle.addEventListener('click', () => {
+    navbar.classList.toggle('active');
+  });
+</script>
 </html>

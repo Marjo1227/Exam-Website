@@ -20,9 +20,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px 60px;
-    font-size: larger;
-    font-weight: bold;
-    
+    position: relative;
 }
 
 header .logo {
@@ -195,4 +193,159 @@ footer {
     height: 48px;
     font-size: 32px;
     margin: 0 10px;
+}
+
+/* Tablets and below */
+@media (max-width: 1024px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px 30px;
+    }
+
+    header nav ul {
+        flex-direction: column;
+        gap: 15px;
+        margin-top: 10px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 30px;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        font-size: medium;
+    }
+
+    .hero-img img {
+        width: 100%;
+        height: auto;
+        margin-top: 20px;
+    }
+
+    .project-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .project-card.reverse {
+        flex-direction: column;
+    }
+
+    .project-content,
+    .project-content p {
+        width: 100%;
+        text-align: center;
+    }
+
+    .project-img img {
+        width: 100%;
+        height: auto;
+        margin-top: 15px;
+    }
+
+    .buttons .btn {
+        margin-bottom: 10px;
+    }
+}
+
+/* Smartphones */
+@media (max-width: 600px) {
+    header {
+        padding: 15px 20px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .hero {
+        padding: 30px 20px;
+    }
+
+    .hero-text .tagline {
+        font-size: large;
+    }
+
+    .hero-text h1 {
+        font-size: 22px;
+    }
+
+    .hero-text .description {
+        font-size: 16px;
+    }
+
+    .buttons .btn {
+        width: 100%;
+        margin: 5px 0;
+    }
+
+    .projects {
+        padding: 30px 20px;
+    }
+
+    .projects h2 {
+        font-size: 24px;
+    }
+
+    .project-card {
+        padding: 15px;
+    }
+
+    .project-content h3 {
+        font-size: 18px;
+    }
+
+    .socials i {
+        font-size: 24px;
+        margin: 0 5px;
+    }
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Responsive navigation + move hamburger to right */
+@media (max-width: 768px) {
+    header {
+        flex-wrap: wrap;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 30px;
+        top: 25px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #fff;
+        padding: 10px 0;
+        margin-top: 50px;
+        border-radius: 5px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+
+    nav ul li {
+        padding: 10px;
+        text-align: center;
+    }
+
+    nav.active ul {
+        display: flex;
+    }
 }
